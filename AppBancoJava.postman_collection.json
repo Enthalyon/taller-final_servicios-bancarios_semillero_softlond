@@ -1,0 +1,418 @@
+{
+	"info": {
+		"_postman_id": "a5e6a045-6698-4d8a-bdd8-1a104c16ee5f",
+		"name": "AppBancoJava",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16661951"
+	},
+	"item": [
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "crear usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Chepito\",\r\n    \"apellido\": \"Restrepo\",\r\n    \"cedula\": \"1010123434\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3500/api/usuario/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3500",
+							"path": [
+								"api",
+								"usuario",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener un usuario",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idUsuario\": 123,\r\n    \"idCuenta\": 1010,\r\n    \"TipoCuenta\": \"CA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3500/api/usuario/obtener-uno?cedula=1010123434",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3500",
+							"path": [
+								"api",
+								"usuario",
+								"obtener-uno"
+							],
+							"query": [
+								{
+									"key": "cedula",
+									"value": "1010123434"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener lista de usuarios",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idUsuario\": 123,\r\n    \"idCuenta\": 1010,\r\n    \"TipoCuenta\": \"CA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3500/api/usuario/listar-todos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3500",
+							"path": [
+								"api",
+								"usuario",
+								"listar-todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar usuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idUsuario\": 123,\r\n    \"idCuenta\": 1010,\r\n    \"TipoCuenta\": \"CA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3500/api/usuario/eliminar?cedula=1010123434",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3500",
+							"path": [
+								"api",
+								"usuario",
+								"eliminar"
+							],
+							"query": [
+								{
+									"key": "cedula",
+									"value": "1010123434"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cuentas",
+			"item": [
+				{
+					"name": "crear cuenta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numeroCuenta\": \"123\",\r\n    \"cedula\": \"1010\",\r\n    \"TipoCuenta\": \"CuentaCorriente\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3500/api/cuenta/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3500",
+							"path": [
+								"api",
+								"cuenta",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener una cuenta",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idUsuario\": 123,\r\n    \"idCuenta\": 1010,\r\n    \"TipoCuenta\": \"CA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3500/api/cuenta/obtener-uno?numeroCuenta=1010",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3500",
+							"path": [
+								"api",
+								"cuenta",
+								"obtener-uno"
+							],
+							"query": [
+								{
+									"key": "numeroCuenta",
+									"value": "1010"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener lista de cuentas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idUsuario\": 123,\r\n    \"idCuenta\": 1010,\r\n    \"TipoCuenta\": \"CA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3500/api/cuenta/listar-todos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3500",
+							"path": [
+								"api",
+								"cuenta",
+								"listar-todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar cuenta",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idUsuario\": 123,\r\n    \"idCuenta\": 1010,\r\n    \"TipoCuenta\": \"CA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3500/api/cuenta/eliminar?numeroCuenta=1010",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3500",
+							"path": [
+								"api",
+								"cuenta",
+								"eliminar"
+							],
+							"query": [
+								{
+									"key": "numeroCuenta",
+									"value": "1010"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transacciones",
+			"item": [
+				{
+					"name": "crear transaccion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tipoTransaccion\": \"retirar\",\r\n    \"monto\": 300000.97,\r\n    \"numeroCuenta\": 1010,\r\n    \"tipoCuentaDestino\": \"CuentaCorriente\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3500/api/transaccion/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3500",
+							"path": [
+								"api",
+								"transaccion",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener una transaccion",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3500/api/transaccion/obtener-uno?idTransaccion=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3500",
+							"path": [
+								"api",
+								"transaccion",
+								"obtener-uno"
+							],
+							"query": [
+								{
+									"key": "idTransaccion",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener lista de transacciones",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idUsuario\": 123,\r\n    \"idCuenta\": 1010,\r\n    \"TipoCuenta\": \"CA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3500/api/transaccion/listar-todos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3500",
+							"path": [
+								"api",
+								"transaccion",
+								"listar-todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar transaccion",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3500/api/transaccion/eliminar?idTransaccion=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3500",
+							"path": [
+								"api",
+								"transaccion",
+								"eliminar"
+							],
+							"query": [
+								{
+									"key": "idTransaccion",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "a5e6a045-6698-4d8a-bdd8-1a104c16ee5f",
+		"_postman_id": "1f3c3e9e-9de3-41e4-a5b6-48abdd44c40b",
 		"name": "AppBancoJava",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "16661951"
+		"_exporter_id": "23163564"
 	},
 	"item": [
 		{
@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\": \"Chepito\",\r\n    \"apellido\": \"Restrepo\",\r\n    \"cedula\": \"1010123434\"\r\n}",
+							"raw": "{\r\n    \"nombre\": \"Pedro\",\r\n    \"apellido\": \"Valencia\",\r\n    \"cedula\": \"1010123438\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -41,23 +41,18 @@
 				},
 				{
 					"name": "obtener un usuario",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
 					"request": {
 						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"idUsuario\": 123,\r\n    \"idCuenta\": 1010,\r\n    \"TipoCuenta\": \"CA\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
 							}
-						},
+						],
 						"url": {
-							"raw": "http://localhost:3500/api/usuario/obtener-uno?cedula=1010123434",
+							"raw": "http://localhost:3500/api/usuario/obtener-uno?cedula=1010123437",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -71,7 +66,7 @@
 							"query": [
 								{
 									"key": "cedula",
-									"value": "1010123434"
+									"value": "1010123437"
 								}
 							]
 						}
@@ -126,7 +121,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3500/api/usuario/eliminar?cedula=1010123434",
+							"raw": "http://localhost:3500/api/usuario/eliminar?cedula=1010123438",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -140,7 +135,7 @@
 							"query": [
 								{
 									"key": "cedula",
-									"value": "1010123434"
+									"value": "1010123438"
 								}
 							]
 						}
@@ -159,7 +154,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"numeroCuenta\": \"123\",\r\n    \"cedula\": \"1010\",\r\n    \"TipoCuenta\": \"CuentaCorriente\"\r\n}",
+							"raw": "{\r\n    \"numeroCuenta\": \"2\",\r\n    \"cedula\": \"1010123438\",\r\n    \"TipoCuenta\": \"CuentaCorriente\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -184,23 +179,11 @@
 				},
 				{
 					"name": "obtener una cuenta",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"idUsuario\": 123,\r\n    \"idCuenta\": 1010,\r\n    \"TipoCuenta\": \"CA\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
-							"raw": "http://localhost:3500/api/cuenta/obtener-uno?numeroCuenta=1010",
+							"raw": "http://localhost:3500/api/cuenta/obtener-uno?numeroCuenta=1234",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -214,7 +197,7 @@
 							"query": [
 								{
 									"key": "numeroCuenta",
-									"value": "1010"
+									"value": "1234"
 								}
 							]
 						}
@@ -259,17 +242,8 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"idUsuario\": 123,\r\n    \"idCuenta\": 1010,\r\n    \"TipoCuenta\": \"CA\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
-							"raw": "http://localhost:3500/api/cuenta/eliminar?numeroCuenta=1010",
+							"raw": "http://localhost:3500/api/cuenta/eliminar?numeroCuenta=2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -283,7 +257,7 @@
 							"query": [
 								{
 									"key": "numeroCuenta",
-									"value": "1010"
+									"value": "2"
 								}
 							]
 						}
@@ -302,7 +276,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"tipoTransaccion\": \"retirar\",\r\n    \"monto\": 300000.97,\r\n    \"numeroCuenta\": 1010,\r\n    \"tipoCuentaDestino\": \"CuentaCorriente\"\r\n}",
+							"raw": "{\r\n    \"tipoTransaccion\": \"depositar\",\r\n    \"monto\": 300000.97,\r\n    \"numeroCuenta\": \"2\",\r\n    \"tipoCuentaDestino\": \"CuentaCorriente\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"

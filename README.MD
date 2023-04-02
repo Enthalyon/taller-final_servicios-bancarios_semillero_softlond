@@ -55,3 +55,8 @@ d. Se deben listar todas las transacciones de una cuenta, buscada por id.
 9. Se brinda tambien el DDL de la base de datos, para quien lo desee revisar.
 
 10. Subir el proyecto a un repositorio Github o Gitlab.
+
+
+## Nota 2:
+
+La colección de postman se encuentra dentro del archivo "AppBancoJava.postman_collection.json".
